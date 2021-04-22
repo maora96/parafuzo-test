@@ -1,0 +1,69 @@
+body {
+  background: #f2f2f2;
+}
+
+/* app */
+
+.App {
+  height: 100vh;
+  width: 100%;
+}
+
+/* header */
+
+header {
+  background: #4dd0e1;
+  height: 60px;
+}
+
+header nav {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* home */
+
+.Home {
+  height: 100%;
+}
+
+.Home .content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.Home .card {
+  width: 95%;
+  margin: 0 auto;
+  background: white;
+}
+
+.Home .card .buttons {
+  display: flex;
+  width: 100%;
+}
+
+.Home .card .buttons div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.Home .card .card-body {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.exit-body,
+.entrance-body {
+  display: flex;
+  flex-direction: column;
+}
