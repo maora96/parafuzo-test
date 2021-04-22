@@ -1,5 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: #f2f2f2;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* app */
@@ -35,7 +44,7 @@ header nav {
   height: 100%;
   width: 100%;
   display: flex;
-  align-items: center;
+  padding-top: 4rem;
 }
 
 .Home .card {
@@ -49,12 +58,17 @@ header nav {
   width: 100%;
 }
 
-.Home .card .buttons div {
+.Home .card .buttons button {
   width: 50%;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   height: 50px;
+  background: #f2f2f2;
+  border: none;
+  color: #9b9b9b;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .Home .card .card-body {
@@ -62,8 +76,89 @@ header nav {
   padding: 1.5rem;
 }
 
+.Home .active {
+  background: white !important;
+  border-radius: 4px 4px 0 0;
+  color: #4dd0e1 !important;
+  border-bottom: 4px solid #4dd0e1 !important;
+}
+
+/* exit/entrance */
 .exit-body,
 .entrance-body {
   display: flex;
   flex-direction: column;
+}
+
+.exit-body p,
+.entrance-body p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #9b9b9b;
+}
+
+.exit-body input,
+.entrance-body input {
+  background: #fffbe6;
+  border: 1px solid #cccccc;
+  height: 70px;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 0.3rem;
+  margin-bottom: 0.8rem;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.exit-body button,
+.entrance-body button {
+  height: 70px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.exit-body button:disabled:first-of-type,
+.entrance-body button:disabled {
+  color: #9b9b9b;
+  background: #dadada;
+}
+
+.exit-body button:disabled:last-of-type {
+  background: white;
+  color: #9b9b9b;
+  border: 2px solid #dadada;
+}
+
+.exit-body button:first-of-type {
+  margin-bottom: 0.8rem;
+}
+
+.entrance-body button {
+  background: #28dd91;
+  color: white;
+}
+
+.exit-body button:first-of-type {
+  background: #a769b2;
+  color: white;
+}
+
+.exit-body button:last-of-type {
+  background-color: white;
+  border: 2px solid #a769b2;
+  color: #a769b2;
+}
+
+.exit-body span {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #00bcd4;
+  margin-top: 1rem;
 }

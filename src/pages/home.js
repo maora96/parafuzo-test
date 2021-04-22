@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Entrance from "../components/entrance";
 import Exit from "../components/exit";
 import Header from "../components/header";
 
 function Home() {
+  const [isEntrance, setIsEntrance] = useState(true);
+
+  const changeMode = () => {
+    setIsEntrance(!isEntrance);
+  };
   return (
     <div className="Home">
       <Header />
@@ -11,13 +16,16 @@ function Home() {
       <div className="content">
         <div className="card">
           <div className="buttons">
-            <div className="entrance">Entrada</div>
-            <div className="exit">Saída</div>
+            <button onClick={changeMode} className={isEntrance ? "active" : ""}>
+              Entrada
+            </button>
+            <button onClick={changeMode} className={isEntrance ? "" : "active"}>
+              Saída
+            </button>
           </div>
 
           <div className="card-body">
-            <Entrance />
-            <Exit />
+            {isEntrance === true ? <Entrance /> : <Exit />}
           </div>
         </div>
       </div>

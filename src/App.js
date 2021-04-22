@@ -12,8 +12,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/exit" component={Exit} />
-          <Route path="/data" component={Data} />
-          <Route path="/data/:id" component={SingleData} />
+          <Route path="/data/:id" component={Data} />
+          <Route path="/single/:id" component={SingleData} />
         </Switch>
       </div>
     </BrowserRouter>
