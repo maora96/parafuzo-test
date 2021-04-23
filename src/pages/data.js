@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import DataEntry from "../components/data-entry";
 import Header from "../components/header";
-import { useRouteMatch } from "react-router-dom";
+import { useRouteMatch, useHistory } from "react-router-dom";
+import Arrow from "../assets/arrow.png";
 
 export default function Data() {
   const { params } = useRouteMatch();
   const [plate, setPlate] = useState([]);
+  const history = useHistory();
+
   useEffect(() => {
     fetch(`https://parking-lot-to-pfz.herokuapp.com/parking/${params.id}`)
       .then((res) => res.json())
@@ -21,12 +24,25 @@ export default function Data() {
     <div className="Data">
       <Header />
 
-      <div className="data-content">
-        <h2>Placa {plate[0].plate}</h2>
-        {plate.map((entry) => {
-          return <DataEntry plate={entry} />;
-        })}
-      </div>
+      {plate ? (
+        <div className="data-content">
+          <div className="data-header">
+            <img
+              src={Arrow}
+              alt=""
+              onCLick={() => {
+                history.push("/");
+              }}
+            />
+            <h2>Placa {plate[0].plate}</h2>
+          </div>
+          {plate.map((entry) => {
+            return <DataEntry plate={entry} />;
+          })}
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
