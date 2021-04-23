@@ -43,7 +43,6 @@ header nav {
 .Home .content {
   height: 100%;
   width: 100%;
-  display: flex;
   padding-top: 4rem;
 }
 
@@ -51,6 +50,7 @@ header nav {
   width: 95%;
   margin: 0 auto;
   background: white;
+  height: 279px;
 }
 
 .Home .card .buttons {
@@ -60,9 +60,6 @@ header nav {
 
 .Home .card .buttons button {
   width: 50%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   height: 50px;
   background: #f2f2f2;
   border: none;
@@ -88,6 +85,17 @@ header nav {
 .entrance-body {
   display: flex;
   flex-direction: column;
+  align-content: center;
+}
+
+.entrance-body img {
+  object-fit: contain;
+  margin-top: 1rem;
+}
+
+.entrance-body .center-me {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .exit-body p,
