@@ -210,3 +210,19 @@ header nav {
   line-height: 33px;
   color: #0a261d;
 }
+
+/* menu */
+
+.Menu {
+  background: #4dd0e1;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  padding: 3rem 2rem;
+}
+
+.Menu ul li {
+  list-style-type: none;
+  color: white;
+  margin-bottom: 3rem;
+}
