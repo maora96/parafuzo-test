@@ -31,4 +31,5 @@ heroku: https://parafuzo-test.herokuapp.com/
 ## dificuldades
 
 - lidar com o cors
-- transferência de dados (talvez usar o useContext?)
+- transferência de dados do histórico para detalhes de cada entry (talvez usar o useContext?)
+- link dos menus redirecionando para certo estado
