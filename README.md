@@ -27,3 +27,8 @@ $ npm start
 ## deploy
 
 heroku: https://parafuzo-test.herokuapp.com/
+
+## dificuldades
+
+- lidar com o cors
+- transferência de dados (talvez usar o useContext?)
